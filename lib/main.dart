@@ -1,4 +1,5 @@
-import 'package:flutter/cupertino.dart';
+import 'package:dashbord_ui/controller/menu_controller.dart';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -6,6 +7,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'widgets/layout.dart';
 
 void main() {
+  Get.put(MenuController());
   runApp(const MyApp());
 }
 
@@ -18,7 +20,6 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Dashbord',
       theme: ThemeData(
-        
         scaffoldBackgroundColor: Colors.white,
         textTheme: GoogleFonts.mulishTextTheme(
           Theme.of(context).textTheme,
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
           },
         ),
       ),
-      home:  SiteLayout(),
+      home: SiteLayout(),
     );
   }
 }
