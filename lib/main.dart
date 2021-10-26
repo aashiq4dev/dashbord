@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
           },
         ),
       ),
-      home: const SiteLayout(),
+      home:  SiteLayout(),
     );
   }
 }
