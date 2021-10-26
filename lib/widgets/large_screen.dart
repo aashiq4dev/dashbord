@@ -15,7 +15,7 @@ class LargeScreenLayout extends StatelessWidget {
           Expanded(
             flex: 5,
             child: Container(
-              color: Colors.yellow,
+              color: Colors.blueGrey,
             ),
           ),
         ],
