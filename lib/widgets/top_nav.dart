@@ -92,25 +92,34 @@ AppBar topAppNavigationBar(
           const SizedBox(
             width: 16.0,
           ),
-          Container(
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(30.0),
-            ),
+          GestureDetector(
+            onTap: () {
+              print("Avatar click");
+            },
             child: Container(
-              padding: const EdgeInsets.all(2.0),
-              margin: const EdgeInsets.all(2.0),
-              child: const CircleAvatar(
-                backgroundColor: light,
-                child: Icon(
-                  Icons.person_outline,
-                  color: dark,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(30.0),
+                border: Border.all(
+                  color: active,
+                  width: 1.0,
+                ),
+              ),
+              child: Container(
+                padding: const EdgeInsets.all(2.0),
+                margin: const EdgeInsets.all(2.0),
+                child: const CircleAvatar(
+                  backgroundColor: light,
+                  child: Icon(
+                    Icons.person_outline,
+                    color: dark,
+                  ),
                 ),
               ),
             ),
           ),
         ],
       ),
-      iconTheme:const IconThemeData(color: dark),
+      iconTheme: const IconThemeData(color: dark),
       backgroundColor: Colors.transparent,
     );
